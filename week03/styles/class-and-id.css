@@ -1,58 +1,31 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0 40px;
-}
-
-h1 {
-    border-bottom: 1px solid rgb(0 110 182);
-    padding-bottom: 0;
-}
-
-
-
-p {
-    margin: 0;
-}
-
-code {
-    color: darkgreen;
-    font-weight: 700;
-    font-size: 1.4rem;
-}
-
-/* Class examples - can be reused */
-
+/* Basic box styling */
 .box {
     margin: 20px 0;
-    border: 1px solid rgb(0 0 0 / 10%);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 10px;
-    background-color: #ddd; /* this is shorthand for #dddddd */
+    background-color: #ddd;
 }
 
+/* Highlight class overrides some box styles */
 .highlight {
     background-color: #efefaa;
     border-radius: 25px;
     padding: 25px;
 }
 
-/* ID examples - should be unique */
-
+/* Unique note ID styling */
 #note {
     background-color: #333;
     color: white;
     width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-#note code {
-    color: yellow;
+/* Optional additional class for extra boxes */
+.note {
+    background-color: #cce5ff;
+    color: #003366;
+    padding: 10px;
+    border-radius: 5px;
 }
-
-#best-practice {
-    background: linear-gradient(135deg, #000 0%, #999 100%);
-    color: white;
-    border-radius: 20px;
-    padding: 20px
-}
-
