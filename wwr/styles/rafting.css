@@ -1,71 +1,272 @@
-/* HEADER GRID */
+/* =============================================
+   RAFTING.CSS – The Waves Water Rafting
+   ============================================= */
+
+/* ---------- CSS Custom Properties ---------- */
+:root {
+    --primary-color: #0b3c5d;
+    --secondary-color: #6a5acd;
+    --accent1-color: #ffffff;
+    --accent2-color: #d9b310;
+    --text-color: #1a1a1a;
+    --light-bg: #f5f5f5;
+    --heading-font: 'Georgia', serif;
+    --body-font: 'Trebuchet MS', sans-serif;
+}
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: #fff;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* =============================================
+   HEADER – CSS Grid for logo + nav layout
+   ============================================= */
 header {
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: auto 1fr;
     align-items: center;
-    padding: 1rem;
+    background-color: var(--secondary-color);
+    padding: 12px 24px;
+    gap: 24px;
 }
 
-/* NAV FLEX */
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-/* HISTORY GRID */
-.history {
-    padding: 2rem;
-}
-
-.history-content {
-    display: grid;
-    grid-template-columns: 1fr 200px 1fr;
-    gap: 1rem;
-    align-items: center;
-}
-
-.history-content img {
-    width: 100%;
-}
-
-/* ADVENTURE FLEX */
-.adventure-gallery {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.adventure-gallery figure {
-    flex: 1;
-    text-align: center;
-}
-
-.adventure-gallery img {
-    width: 100%;
+header .logo {
+    width: 120px;
     height: auto;
+    border-radius: 6px;
+    display: block;
 }
 
-/* FOOTER FLEX */
+/* NAV – CSS Flexbox */
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 8px 16px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: var(--body-font);
+    font-size: 0.95em;
+    background-color: var(--accent1-color);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    border-color: var(--primary-color);
+}
+
+/* =============================================
+   HERO SECTION
+   ============================================= */
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    min-height: 340px;
+}
+
+.hero .hero-bg {
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: var(--accent1-color);
+    font-family: var(--heading-font);
+    font-size: 2em;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.hero .hero-article {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    background: rgba(217, 179, 16, 0.85);
+    padding: 14px 20px;
+    z-index: 2;
+}
+
+.hero .hero-article p {
+    flex: 1;
+    font-family: var(--body-font);
+    color: var(--primary-color);
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.hero .hero-article img {
+    width: 90px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+/* =============================================
+   HISTORY SECTION – 3-column grid
+   ============================================= */
+.history-section {
+    background-color: var(--light-bg);
+    padding: 40px 30px;
+}
+
+.history-section h2 {
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: 24px;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 24px;
+    align-items: center;
+}
+
+.history-grid p {
+    font-family: var(--body-font);
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.history-grid img {
+    width: 180px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+/* =============================================
+   ADVENTURES SECTION – Flexbox gallery of 5
+   ============================================= */
+.adventures-section {
+    padding: 40px 30px;
+    background-color: #fff;
+}
+
+.adventures-section h2 {
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: 28px;
+}
+
+.adventures-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: nowrap;
+}
+
+.adventures-gallery figure {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.adventures-gallery figure img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+.adventures-gallery figcaption {
+    font-family: var(--body-font);
+    font-size: 0.8em;
+    text-align: center;
+    color: var(--text-color);
+    word-break: break-word;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
 footer {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    background-color: var(--secondary-color);
+    padding: 14px 24px;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
-.social {
+footer p {
+    font-family: var(--body-font);
+    font-size: 0.9em;
+    color: var(--accent1-color);
+}
+
+footer .socialmedia {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
     gap: 10px;
 }
 
-.social img {
-    width: 30px;
+footer .socialmedia a img {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 2px solid var(--accent1-color);
+    transition: opacity 0.2s;
+}
+
+footer .socialmedia a img:hover {
+    opacity: 0.75;
 }
