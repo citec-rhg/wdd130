@@ -1,60 +1,132 @@
-/* Universal Selector Reset */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General Styles */
+/* BODY */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-header nav {
-    background-color: #333;
+/* CONTAINER WIDTH */
+header,
+.grid,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: steelblue;
     padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
+    display: block;
     color: white;
-    margin-right: 1rem;
+    padding: 0.5rem 1rem;
     text-decoration: none;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* GRID LAYOUT */
+.grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* LEFT SIDE CARD */
+.card {
+    background-color: #eee;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+/* ASIDE IMAGE */
+aside img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* ASIDE TITLE */
+aside h2 {
+    margin-bottom: 0.5rem;
+}
+
+/* MAIN */
 main {
     padding: 1rem;
 }
 
+/* HEADING */
+h1 {
+    color: steelblue;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+/* INTRO FLEX (TEXT + IMAGE) */
+.intro {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+/* PROFILE IMAGE */
 .profile-img {
-    float: right;
-    margin: 0 0 1rem 1rem;
-    border: 3px solid gray;
+    width: 150px;
+    height: auto;
+    border: 2px solid #ccc;
 }
 
-aside {
-    position: relative;
-}
-
-/* Overlay Heading */
-aside h2 {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 0.5rem;
-}
-
-/* Class Selectors */
+/* LIST BOX */
 .box {
-    margin: 1rem;
+    margin-top: 1rem;
     padding: 1rem;
     border: 1px solid #ccc;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #ddd;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro {
+        flex-direction: column;
+    }
+
+    .profile-img {
+        margin: auto;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
 }
