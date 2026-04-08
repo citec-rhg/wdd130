@@ -14,23 +14,23 @@
         <h1>Exercise: Block vs. Inline Elements</h1>
 
         <p class="note">
-            Some basic styling has been applied in order to illustrate the elements structure and
-            boundaries.
+            Some basic styling has been applied to illustrate the elements structure and boundaries.
         </p>
 
+        <!-- Task 1 -->
         <h2>Task 1: Swap Block and Inline Elements</h2>
-
         <span>In the HTML of this document, change this div element to a span element.</span>
 
         <p class="question">
             What happens to the layout? Does it still take up the full width?
         </p>
 
+        <!-- Task 2 -->
         <h2>Task 2: Nesting Inline in Block</h2>
-
         <p>
             A paragraph &lt;p&gt; element (block) with a
             <span>&lt;span&gt; element</span> and <em>emphasized text</em>.
+            <strong>Strong text added</strong>
         </p>
 
         <p class="question">
@@ -38,8 +38,8 @@
             Observe how it flows within the line.
         </p>
 
+        <!-- Task 3 -->
         <h2>Task 3: Nesting Block in Inline</h2>
-
         <span>
             Try placing a div inside span
             <div>This is a div inside span</div>
@@ -49,15 +49,21 @@
             What error or layout issue do you see? Why does this happen?
         </p>
 
-        <h2>Task 4: Review the HTML markup of the following Inline Elements</h2>
+        <!-- Task 4 -->
+        <h2>Task 4: Review Inline Elements</h2>
 
-        &lt;img&gt; element
-        <img src="images/castle.webp" alt="placeholder image (images are inline)" width="300"
-          height="300">
+        <p>
+            Inline elements in this example:
+            <span>&lt;span&gt;</span>,
+            <img src="images/castle.webp" alt="placeholder image" width="300" height="300">,
+            <a href="https://churchofjesuschrist.org">&lt;a&gt; anchor element</a>,
+            <button type="button">&lt;button&gt; element</button>
+        </p>
 
-        <a href="https://churchofjesuschrist.org">&lt;a&gt; anchor element</a>
-
-        <button type="button">&lt;button&gt; element</button>
+        <p class="note">
+            Inline elements are only as wide as their content. Block elements span the full width of
+            their container.
+        </p>
 
     </main>
 </body>

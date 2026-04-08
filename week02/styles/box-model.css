@@ -1,29 +1,65 @@
-.callout {
-    max-width: 400px;
-    margin: 10px;
-    border: 1px solid rgb(0 0 0 / 0.1);
-    padding: 15px;
-    background-color: #247;
-    color: #fff;
-}
-
-.callout img {
-    float: right;
-    margin: 0 0 10px 15px;
-    border: 1px solid #000;
-    padding: 3px;
-    background-color: #bbb;
-    width: 15 0px;
-    height: auto;
-}
-
-blockquote {
+/* Reset default spacing */
+body {
     margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    /* white page background */
 }
 
-cite {
+/* Center the callout box */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Callout box styling */
+.callout {
+    background: #2f4f7f;
+    /* blue box */
+    color: white;
+    width: 460px;
+    /* box width */
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+/* Image in top-right corner of the box */
+.callout img {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid white;
+    border-radius: 8px;
+}
+
+/* Blockquote text spacing */
+.callout blockquote {
+    margin: 0;
+    padding-right: 140px;
+    /* leave space for image */
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* Full-width dotted line above citation */
+.callout .dotted-line {
+    border-top: 2px dotted #ffffff;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+/* Citation styling at bottom-right */
+.callout cite {
     display: block;
-    border-top: 1px dotted #fff;
     text-align: right;
-    font-size: smaller;
+    font-style: italic;
+    font-size: 13px;
+    color: #ffffff;
 }
