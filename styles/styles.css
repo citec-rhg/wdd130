@@ -5,58 +5,90 @@
     box-sizing: border-box;
 }
 
-/* HEADER */
-header {
-    display: flex;
-    flex-direction: row;
-    /* fixed missing value */
-    align-items: center;
-    justify-content: space-between;
-    padding: 25px;
+/* NAVIGATION */
+nav {
     background-color: steelblue;
+    padding: 1rem;
+    display: flex;
+    align-item: center;
+    justify-content: space-evenly;
+
 }
 
-/* NAV LINKS */
 nav a {
     color: white;
-    padding: 5px;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
 }
 
-/* HEADING */
-h1 {
-    color: steelblue;
-    padding: 2rem;
+/* GRID LAYOUT */
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
 }
 
-/* BOX STYLE */
-.box {
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 10%);
-    padding: 6rem;
-    background-color: #ddd;
-    color: #000;
+body {
+    font-size: 16px;
+    font-family: Roboto, Arial, san serif;
+    display: block;
 }
 
-/* ASIDE (fixed selector) */
+/* PROFILE IMAGE (FLOAT RIGHT) */
+.profile-img {
+    float: right;
+    width: 100px;
+    height: auto;
+    border: 1px solid steelblue;
+    box-shadow: 0 0 30px grey;
+    margin: 0 0 1rem 1rem;
+}
+
+/* ASIDE (UGANDA SECTION) */
 aside {
     width: 20em;
     text-align: center;
-    padding: 25px;
+    position: relative;
 }
 
-/* ASIDE IMAGE */
+h1 {
+    color: steelblue;
+}
+
+p {
+    margin: 1rem;
+}
+
 aside img {
-    width: 100%;
+    width: 250px;
+    height: auto;
 }
 
-/* FIXED BAD POSITIONING */
 aside h2 {
-    margin: 10px 0;
+    position: absolute;
+    top: 80px;
+    left: 80px;
 }
 
 /* FOOTER */
 footer {
-    margin-top: 1em;
-    border-top: 1px solid #000;
     text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ccc;
+}
+
+/* class selector*/
+.box {
+    margin: 1em;
+    border: 1px solid rgba (0, 0, 0, .1);
+    padding: 1em;
+    background-color: #eee;
+    color: #000;
+
+}
+
+.indent {
+    padding-left: 2em;
 }
