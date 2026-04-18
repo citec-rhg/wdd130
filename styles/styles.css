@@ -12,7 +12,6 @@ nav {
     display: flex;
     align-item: center;
     justify-content: space-evenly;
-
 }
 
 nav a {
@@ -33,6 +32,15 @@ body {
     font-size: 16px;
     font-family: Roboto, Arial, san serif;
     display: block;
+}
+
+main {
+    flex-position: left;
+    text-align: center;
+    margin: 1em;
+    border: 10px;
+    padding: 1em;
+    float: right;
 }
 
 /* PROFILE IMAGE (FLOAT RIGHT) */
@@ -86,7 +94,6 @@ footer {
     padding: 1em;
     background-color: #eee;
     color: #000;
-
 }
 
 .indent {
